@@ -37,7 +37,10 @@
 */
 
 - (IBAction)save:(id)sender {
-   UIImageWriteToSavedPhotosAlbum(_compimage, nil, nil, nil);
+  NSData* imdata = UIImagePNGRepresentation ( _compimage );
+  UIImage* im2 = [UIImage imageWithData:imdata];
+  UIImageWriteToSavedPhotosAlbum(im2, nil, nil, nil);
+  // UIImageWriteToSavedPhotosAlbum(_compimage, nil, nil, nil);
   
 }
 
@@ -51,7 +54,7 @@
   NSData* data = UIImagePNGRepresentation(_compimage);
   [data writeToFile:path atomically:YES];
   
-  
+  NSLog(@"%@",path);
   [self sendFile:[[NSURL alloc] initFileURLWithPath:path]];
   
 

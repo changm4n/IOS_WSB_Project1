@@ -38,27 +38,39 @@
   
   
 }
+//
+//-(UIImage*) makeImage {
+//  
+//  UIGraphicsBeginImageContext(self.view.bounds.size);
+//  
+//  [self.view.layer renderInContext:UIGraphicsGetCurrentContext()];
+//  
+//  UIImage *viewImage = UIGraphicsGetImageFromCurrentImageContext();
+//  UIGraphicsEndImageContext();
+//  
+//  return viewImage;
+//}
 
--(UIImage*) makeImage {
-  
-  UIGraphicsBeginImageContext(self.view.bounds.size);
-  
-  [self.view.layer renderInContext:UIGraphicsGetCurrentContext()];
-  
-  UIImage *viewImage = UIGraphicsGetImageFromCurrentImageContext();
+- (UIImage *)snapshot:(UIView *)view
+{
+  UIGraphicsBeginImageContextWithOptions(view.bounds.size, YES, 0);
+  [view drawViewHierarchyInRect:view.bounds afterScreenUpdates:YES];
+  UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
   UIGraphicsEndImageContext();
   
-  return viewImage;
+  return image;
 }
+
 
 -(void)nextButtonPressed{
   
   CompleteViewController *view = [[CompleteViewController alloc]init];
-  view.compimage = [self makeImage];
+  UIImage *image = [self snapshot:self.view];
+  view.compimage = image;
+  UIImageWriteToSavedPhotosAlbum(image ,nil, nil, nil);
   [self.navigationController pushViewController:view animated:YES];
   
 }
-
 
 - (void)imageTaped:(UIGestureRecognizer *)gestureRecognizer {
   UIActionSheet *myAct = [[UIActionSheet alloc]initWithTitle:@"사진 추가"
