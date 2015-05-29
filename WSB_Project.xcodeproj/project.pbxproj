@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37309BBA1B1898BB00A1575D /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37309BB91B1898BB00A1575D /* CollectionViewController.m */; };
+		37AFD8061B18F371004F7FF3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37AFD8051B18F371004F7FF3 /* Default-568h@2x.png */; };
 		37D7B6841B0248F4005E66B7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D7B6831B0248F4005E66B7 /* main.m */; };
 		37D7B6871B0248F4005E66B7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D7B6861B0248F4005E66B7 /* AppDelegate.m */; };
 		37D7B68F1B0248F4005E66B7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37D7B68E1B0248F4005E66B7 /* Images.xcassets */; };
-		37D7B6921B0248F4005E66B7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37D7B6901B0248F4005E66B7 /* LaunchScreen.xib */; };
 		37D7B69E1B0248F4005E66B7 /* WSB_ProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D7B69D1B0248F4005E66B7 /* WSB_ProjectTests.m */; };
 		37D7B6AA1B02494D005E66B7 /* SetThemeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D7B6A81B02494D005E66B7 /* SetThemeViewController.m */; };
 		37D7B6AB1B02494D005E66B7 /* SetThemeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37D7B6A91B02494D005E66B7 /* SetThemeViewController.xib */; };
@@ -35,13 +36,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		37309BB81B1898BB00A1575D /* CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CollectionViewController.h; path = ../../MyClass/CollectionViewController.h; sourceTree = "<group>"; };
+		37309BB91B1898BB00A1575D /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CollectionViewController.m; path = ../../MyClass/CollectionViewController.m; sourceTree = "<group>"; };
+		37AFD8051B18F371004F7FF3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		37D7B67E1B0248F4005E66B7 /* WSB_Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WSB_Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37D7B6821B0248F4005E66B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37D7B6831B0248F4005E66B7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		37D7B6851B0248F4005E66B7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		37D7B6861B0248F4005E66B7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		37D7B68E1B0248F4005E66B7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		37D7B6911B0248F4005E66B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		37D7B6971B0248F4005E66B7 /* WSB_ProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WSB_ProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		37D7B69C1B0248F4005E66B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37D7B69D1B0248F4005E66B7 /* WSB_ProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WSB_ProjectTests.m; sourceTree = "<group>"; };
@@ -85,9 +88,6 @@
 		37D7B6751B0248F4005E66B7 = {
 			isa = PBXGroup;
 			children = (
-				37D7B6C01B02694C005E66B7 /* CoreGraphics.framework */,
-				37D7B6BE1B026945005E66B7 /* UIKit.framework */,
-				37D7B6BC1B02693A005E66B7 /* Foundation.framework */,
 				37D7B6801B0248F4005E66B7 /* WSB_Project */,
 				37D7B69A1B0248F4005E66B7 /* WSB_ProjectTests */,
 				37D7B67F1B0248F4005E66B7 /* Products */,
@@ -106,11 +106,11 @@
 		37D7B6801B0248F4005E66B7 /* WSB_Project */ = {
 			isa = PBXGroup;
 			children = (
+				37309BB81B1898BB00A1575D /* CollectionViewController.h */,
+				37309BB91B1898BB00A1575D /* CollectionViewController.m */,
 				37D7B6851B0248F4005E66B7 /* AppDelegate.h */,
-				37D7B6BA1B026279005E66B7 /* KakaoOpenSDK.framework */,
 				37D7B6861B0248F4005E66B7 /* AppDelegate.m */,
 				37D7B68E1B0248F4005E66B7 /* Images.xcassets */,
-				37D7B6901B0248F4005E66B7 /* LaunchScreen.xib */,
 				37D7B6811B0248F4005E66B7 /* Supporting Files */,
 				37D7B6A71B02494D005E66B7 /* SetThemeViewController.h */,
 				37D7B6A81B02494D005E66B7 /* SetThemeViewController.m */,
@@ -128,6 +128,11 @@
 		37D7B6811B0248F4005E66B7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				37AFD8051B18F371004F7FF3 /* Default-568h@2x.png */,
+				37D7B6BA1B026279005E66B7 /* KakaoOpenSDK.framework */,
+				37D7B6C01B02694C005E66B7 /* CoreGraphics.framework */,
+				37D7B6BE1B026945005E66B7 /* UIKit.framework */,
+				37D7B6BC1B02693A005E66B7 /* Foundation.framework */,
 				37D7B6821B0248F4005E66B7 /* Info.plist */,
 				37D7B6831B0248F4005E66B7 /* main.m */,
 			);
@@ -232,9 +237,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				37D7B6B51B025AE5005E66B7 /* CompleteViewController.xib in Resources */,
-				37D7B6921B0248F4005E66B7 /* LaunchScreen.xib in Resources */,
 				37D7B68F1B0248F4005E66B7 /* Images.xcassets in Resources */,
 				37D7B6B01B0255E9005E66B7 /* SetDetailViewController.xib in Resources */,
+				37AFD8061B18F371004F7FF3 /* Default-568h@2x.png in Resources */,
 				37D7B6AB1B02494D005E66B7 /* SetThemeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -255,6 +260,7 @@
 			files = (
 				37D7B6871B0248F4005E66B7 /* AppDelegate.m in Sources */,
 				37D7B6841B0248F4005E66B7 /* main.m in Sources */,
+				37309BBA1B1898BB00A1575D /* CollectionViewController.m in Sources */,
 				37D7B6AF1B0255E9005E66B7 /* SetDetailViewController.m in Sources */,
 				37D7B6B41B025AE5005E66B7 /* CompleteViewController.m in Sources */,
 				37D7B6AA1B02494D005E66B7 /* SetThemeViewController.m in Sources */,
@@ -278,17 +284,6 @@
 			targetProxy = 37D7B6981B0248F4005E66B7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		37D7B6901B0248F4005E66B7 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				37D7B6911B0248F4005E66B7 /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		37D7B69F1B0248F4005E66B7 /* Debug */ = {
@@ -464,6 +459,7 @@
 				37D7B6A31B0248F4005E66B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		37D7B6A41B0248F4005E66B7 /* Build configuration list for PBXNativeTarget "WSB_ProjectTests" */ = {
 			isa = XCConfigurationList;
@@ -472,6 +468,7 @@
 				37D7B6A61B0248F4005E66B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

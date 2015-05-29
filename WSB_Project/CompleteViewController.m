@@ -19,8 +19,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
   [_completeImage setImage:_compimage];
+  
+  UIBarButtonItem *left = [[UIBarButtonItem alloc]initWithImage:[[UIImage imageNamed:@"backButton.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]  style:UIBarButtonItemStylePlain target:self action:@selector(backbuttonPressed)];
+  UIBarButtonItem *right =[[UIBarButtonItem alloc]initWithImage:[[UIImage imageNamed:@"mainbutton.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]  style:UIBarButtonItemStylePlain target:self action:@selector(homeButtonPressed)];
+  
+  
+  
+  self.navigationItem.leftBarButtonItem = left;
+  self.navigationItem.rightBarButtonItem = right;
+  
 }
 
+-(void)backbuttonPressed{
+  [self.navigationController popViewControllerAnimated:YES];
+}
+-(void)homeButtonPressed{
+  [self.navigationController popToRootViewControllerAnimated:YES];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

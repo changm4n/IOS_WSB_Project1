@@ -9,13 +9,15 @@
 #import <UIKit/UIKit.h>
 
 @interface SetThemeViewController : UIViewController
-@property (strong, nonatomic) IBOutlet UILabel *themeSample;
+
+@property (strong, nonatomic) IBOutlet UIImageView *themeImage;
 
 @property (strong, nonatomic) UIScrollView *scrollview;
+@property (strong, nonatomic) UIImageView *barImage;
 @property (strong, nonatomic) NSMutableArray *items;
 
 
--(void)buttonPressed:(id)sender;
+- (void)imageTaped:(UIGestureRecognizer *)gestureRecognizer ;
 
 @end
 

@@ -7,17 +7,26 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface SetDetailViewController : UIViewController <UIActionSheetDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,UITextFieldDelegate>{
+#import "CollectionViewController.h"
+@interface SetDetailViewController : UIViewController <UIActionSheetDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,UITextFieldDelegate,CollectionViewControllerDelegate>{
     UIImagePickerController *myPicker;
 }
 
 
-@property (strong,nonatomic) NSString *themeNum;
+@property (strong, nonatomic) IBOutlet UIView *staticView;
+@property (strong, nonatomic) IBOutlet UIImageView *themeBackImage;
+@property (strong,nonatomic) UIImage *themeImage;
 
+@property (strong, nonatomic) IBOutlet UITextField *dateText;
+@property (strong, nonatomic) IBOutlet UITextField *serialText;
+@property (strong, nonatomic) IBOutlet UITextField *exText;
 
-@property (strong, nonatomic) IBOutlet UILabel *themeLabel;
+@property (strong, nonatomic) UITextField *currentTextField;
+
 @property (strong, nonatomic) IBOutlet UIImageView *ImageView;
 @property (strong, nonatomic) IBOutlet UITextField *nameField;
+
+
+-(void)imagePicked:(UIImage *)image;
 
 @end

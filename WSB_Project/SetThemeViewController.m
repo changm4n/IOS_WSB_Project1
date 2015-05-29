@@ -8,6 +8,8 @@
 
 #import "SetThemeViewController.h"
 #import "SetDetailViewController.h"
+#define height_of_statusbar 20
+
 @interface SetThemeViewController ()
 
 @end
@@ -17,60 +19,84 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
   
-    self.title = @"테마설정";
+  CGFloat nRed=253/255.0;
+  CGFloat nGreen=248/255.0;
+  CGFloat nBlue=225/255.0;
+  UIColor *myColor=[UIColor colorWithRed:nRed green:nGreen blue:nBlue alpha:1];
   
-  float h = 50.0;
-  float w = 50.0;
-  float pad = 10.0;
-  int n = 10;
   
-  _scrollview = [[UIScrollView alloc]initWithFrame:CGRectMake(0, self.view.bounds.size.height - h-2*pad,self.view.frame.size.width, h+2*pad)];
   
-  _scrollview.contentSize = CGSizeMake((w + pad)*n , h);
-  _scrollview.backgroundColor = [UIColor darkGrayColor];
+  float h = 87.7;
+  float w = 58.5;
+  float wpad = 36.0;
+  float hpad = 10;
+  int n = 16;
+  
+  _scrollview = [[UIScrollView alloc]initWithFrame:CGRectMake(0, self.view.bounds.size.height-height_of_statusbar - self.navigationController.navigationBar.bounds.size.height,self.view.frame.size.width, h+2*hpad)];
+  _scrollview.contentSize = CGSizeMake((w + wpad)*n+wpad , h);
+  _scrollview.backgroundColor = myColor;
   _scrollview.autoresizingMask = UIViewAutoresizingFlexibleWidth;
   _scrollview.showsHorizontalScrollIndicator = NO;
   
+  
+  _barImage = [[UIImageView alloc]initWithFrame:CGRectMake(0, _scrollview.frame.origin.y-20,self.view.frame.size.width,20)];
+  [_barImage setImage:[UIImage imageNamed:@"bar.png"]];
+  
+  
+  
+  
+  
+  [self.view addSubview:_barImage];
+  [self.view addSubview:_scrollview];
+  
   for(int i = 0; i < n ; i++){
-    UIButton *button =[[UIButton alloc]initWithFrame:CGRectMake(pad*(i+1)+(i*w),pad,w,h)];
-    [button setTitle:[NSString stringWithFormat:@"%d",i] forState:UIControlStateNormal ];
-    button.backgroundColor  = [UIColor blackColor];
-    [button addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
-    [_scrollview addSubview:button];
+    UIImageView *Imageview = [[UIImageView alloc]initWithFrame:CGRectMake(wpad*(i+1)+(i*w),hpad,w,h)];
+    UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imageTaped:)];
+    singleTap.numberOfTapsRequired = 1;
+    singleTap.numberOfTouchesRequired = 1;
+    
+    
+    
+    [Imageview addGestureRecognizer:singleTap];
+    [Imageview setUserInteractionEnabled:YES];
+    Imageview.tag = i+1;
+    [Imageview setImage:[UIImage imageNamed:[NSString stringWithFormat:@"T%d",i+1]]];
+    
+    [_scrollview addSubview:Imageview];
+    
    
   }
   
   
-  
-  
-  UIBarButtonItem *right = [[UIBarButtonItem alloc]initWithTitle:@"다음" style:UIBarButtonItemStylePlain target:self action:@selector(nextButtonPressed)];
+  UIBarButtonItem *right = [[UIBarButtonItem alloc]initWithImage:[[UIImage imageNamed:@"nextButton.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]  style:UIBarButtonItemStylePlain target:self action:@selector(nextButtonPressed)];
   self.navigationItem.rightBarButtonItem = right;
   
   
+    [UIView animateWithDuration:0.3 delay:0.0 options:UIViewAnimationOptionCurveEaseInOut
+                   animations:^{
+                     _scrollview.frame =CGRectMake(0, self.view.bounds.size.height - h-2*hpad-height_of_statusbar - self.navigationController.navigationBar.bounds.size.height,self.view.frame.size.width, h+2*hpad);
+                     _barImage.frame = CGRectMake(0, _scrollview.frame.origin.y-20, 320, 20 );
+                     
+                   } completion:nil];
   
-  
-  [self.view addSubview:_scrollview];
+
   
 }
 
 -(void)nextButtonPressed{
   
   SetDetailViewController *view = [[SetDetailViewController alloc]init];
-  view.themeNum =_themeSample.text;
+  view.themeImage = _themeImage.image;
   [self.navigationController pushViewController:view animated:YES];
   
 }
 
 
 
-
--(void)buttonPressed:(id)sender{
+- (void)imageTaped:(UIGestureRecognizer*)sender {
+  UIImageView *imageView = (UIImageView *)sender.view ;
   
-  UIButton *tmp = (UIButton *)sender;
-
-  
-  _themeSample.text =  tmp.titleLabel.text;
-  
+  [_themeImage  setImage:[UIImage imageNamed:[NSString stringWithFormat:@"T%d",(int)imageView.tag]]];
   
 }
 

@@ -10,15 +10,27 @@
 	<string>WSB_Project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>184A714EFBD01D177685172CA1BB20BEA49527F1</key>
+		<string>github.com:lcm6528/IOS_HomeTraining.git</string>
+		<key>1EC8E57C5C14F4C8088C8479B25829984025B1A1</key>
+		<string>github.com:lcm6528/IOS_GoSpursGo.git</string>
 		<key>D2D734AAA64C4143FC87EA00BFD1C6B1A31ACB34</key>
 		<string>github.com:lcm6528/IOS_WSB_Project1.git</string>
+		<key>EC3A3964A8C947AD5121598F2C6A46D3EE419BCA</key>
+		<string>github.com:lcm6528/IOS_Minee.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>WSB_Project.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>184A714EFBD01D177685172CA1BB20BEA49527F1</key>
+		<string>../../../HomeTraining</string>
+		<key>1EC8E57C5C14F4C8088C8479B25829984025B1A1</key>
+		<string>../../../GoSpursGo</string>
 		<key>D2D734AAA64C4143FC87EA00BFD1C6B1A31ACB34</key>
 		<string>../..</string>
+		<key>EC3A3964A8C947AD5121598F2C6A46D3EE419BCA</key>
+		<string>../../../MyClass</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>github.com:lcm6528/IOS_WSB_Project1.git</string>
@@ -28,6 +40,30 @@
 	<string>D2D734AAA64C4143FC87EA00BFD1C6B1A31ACB34</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>1EC8E57C5C14F4C8088C8479B25829984025B1A1</string>
+			<key>IDESourceControlWCCName</key>
+			<string>GoSpursGo</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>184A714EFBD01D177685172CA1BB20BEA49527F1</string>
+			<key>IDESourceControlWCCName</key>
+			<string>HomeTraining</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>EC3A3964A8C947AD5121598F2C6A46D3EE419BCA</string>
+			<key>IDESourceControlWCCName</key>
+			<string>MyClass</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>

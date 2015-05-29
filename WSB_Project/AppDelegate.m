@@ -23,6 +23,17 @@
   
   SetThemeViewController * view = [[SetThemeViewController alloc]init];
   UINavigationController *navi = [[UINavigationController alloc]initWithRootViewController:view];
+  navi.navigationBar.translucent = NO;
+  
+  CGFloat nRed=253/255.0;
+  CGFloat nGreen=248/255.0;
+  CGFloat nBlue=225/255.0;
+  UIColor *myColor=[UIColor colorWithRed:nRed green:nGreen blue:nBlue alpha:1];
+  
+  navi.navigationBar.barTintColor = myColor;
+  
+  
+  
   self.window.rootViewController = navi;
   [self.window addSubview:navi.view];
   
