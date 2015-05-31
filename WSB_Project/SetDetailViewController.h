@@ -12,6 +12,7 @@
     UIImagePickerController *myPicker;
 }
 
+@property (strong, nonatomic) IBOutlet UIImageView *plusImageView;
 
 @property (strong, nonatomic) IBOutlet UIView *staticView;
 @property (strong, nonatomic) IBOutlet UIImageView *themeBackImage;

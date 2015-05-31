@@ -10,6 +10,7 @@
                 <outlet property="dateText" destination="UdT-cu-rtG" id="wZJ-g4-oat"/>
                 <outlet property="exText" destination="e95-1Y-nwo" id="iT4-gG-hZc"/>
                 <outlet property="nameField" destination="Zsg-lT-0ia" id="TbR-eM-DDR"/>
+                <outlet property="plusImageView" destination="G1c-3f-kQh" id="6JN-Fh-dxD"/>
                 <outlet property="serialText" destination="Bbf-QC-u6j" id="Q6M-GN-kUF"/>
                 <outlet property="staticView" destination="tgA-5v-Gb4" id="41b-Fc-GUW"/>
                 <outlet property="themeBackImage" destination="vax-pM-Z4D" id="Vdb-Zh-ZUP"/>
@@ -33,9 +34,6 @@
                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jeV-A6-nK6">
-                            <rect key="frame" x="62" y="103" width="199" height="170"/>
-                        </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="사용기간" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bDQ-sk-Wfq">
                             <rect key="frame" x="60" y="363" width="66" height="21"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -78,6 +76,12 @@
                                 <outlet property="delegate" destination="-1" id="bvh-pr-Rk4"/>
                             </connections>
                         </textField>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="plus" translatesAutoresizingMaskIntoConstraints="NO" id="G1c-3f-kQh">
+                            <rect key="frame" x="110" y="136" width="100" height="120"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jeV-A6-nK6">
+                            <rect key="frame" x="61" y="105" width="199" height="165"/>
+                        </imageView>
                     </subviews>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
@@ -98,5 +102,6 @@
     </objects>
     <resources>
         <image name="mainSample" width="418" height="652"/>
+        <image name="plus" width="86" height="106"/>
     </resources>
 </document>

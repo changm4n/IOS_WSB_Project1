@@ -30,7 +30,7 @@
   float w = 58.5;
   float wpad = 36.0;
   float hpad = 10;
-  int n = 16;
+  int n = 20;
   
   _scrollview = [[UIScrollView alloc]initWithFrame:CGRectMake(0, self.view.bounds.size.height-height_of_statusbar - self.navigationController.navigationBar.bounds.size.height,self.view.frame.size.width, h+2*hpad)];
   _scrollview.contentSize = CGSizeMake((w + wpad)*n+wpad , h);
@@ -60,7 +60,7 @@
     [Imageview addGestureRecognizer:singleTap];
     [Imageview setUserInteractionEnabled:YES];
     Imageview.tag = i+1;
-    [Imageview setImage:[UIImage imageNamed:[NSString stringWithFormat:@"T%d",i+1]]];
+    [Imageview setImage:[UIImage imageNamed:[NSString stringWithFormat:@"tt%d",i+1]]];
     
     [_scrollview addSubview:Imageview];
     

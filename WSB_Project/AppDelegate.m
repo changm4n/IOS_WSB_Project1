@@ -35,7 +35,7 @@
   
   
   self.window.rootViewController = navi;
-  [self.window addSubview:navi.view];
+ // [self.window addSubview:navi.view];
   
   return YES;
 }
